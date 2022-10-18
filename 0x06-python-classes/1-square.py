@@ -1,9 +1,12 @@
 #!/usr/bin/python3
 
-"""Creates a new type of Square Class"""
+
+"""creates a new type of type  Square."""
+
 
 class Square:
-    """Define the Class"""
+    """creates a new type of type  Square."""
+
     def __init__(self, size):
-        """Initialize the square size"""
+        """Initialize the square type."""
         self.__size = size
