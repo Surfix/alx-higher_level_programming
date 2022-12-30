@@ -1,18 +1,18 @@
 #!/usr/bin/python3
-''' First Rectangle'''
-
+'''Rectangle class module - tests located in tests/test_base.py'''
 from models.base import Base
 
-class Rectange(Base):
-   '''Rectangle class that inherits from Base class'''
 
-   def __init__(self, width, height, x=0, y=0, id = None):
-      ''' init method '''
-      self.width = width
-      self.height = height
-      self.x = x
-      self.y = y
-      super().__init__(id)
+class Rectangle(Base):
+    '''my Rectangle class'''
+
+    def __init__(self, width, height, x=0, y=0, id=None):
+        '''init magic'''
+        super().__init__(id)
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
 
     @property
     def width(self):
