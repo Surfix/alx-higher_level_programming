@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 '''base class module'''
+import json
 
 class Base:
     '''the Base class'''
@@ -16,8 +17,7 @@ class Base:
 
     @staticmethod
     def to_json_string(list_dictionaries):
-        '''__dict__ to json'''
-        if list_dictionaries is None or not list_dictionaries:
+        """Return json format for list of dict."""
+        if not list_dictionaries:
             return "[]"
-        else:
-            return dumps(list_dictionaries)
+        return json.dumps(list_dictionaries)
