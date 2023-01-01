@@ -82,3 +82,22 @@ class Rectangle(Base):
         return '[{}] ({}) {}/{} - {}/{}'. \
             format(type(self).__name__, self.id, self.x, self.y, self.width,
                    self.height)
+
+    def update(self, *args, **kwargs):
+        """Update rectangle using arg-var."""
+        if args and len(args) > 0:
+            for i, v in enumerate(args):
+                if i == 0:
+                    self.id = v
+                elif i == 1:
+                    self.width = v
+                elif i == 2:
+                    self.height = v
+                elif i == 3:
+                    self.x = v
+                elif i == 4:
+                    self.y = v
+        else:
+
+            for k, v in kwargs.items():
+                setattr(self, k, v)
